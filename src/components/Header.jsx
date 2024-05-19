@@ -12,7 +12,7 @@ const Links = () => {
 
     return links.map((link) => <li onClick={() => setActive('')} key={link}><Link
     className={window.location.pathname.slice(1) === link
-    ? active : ''} to={`/${link}`}>{link}</Link></li>)
+    ? active : ''} to={`${link}`}>{link}</Link></li>)
 }
 
 const Header = ({ logo }) => {
