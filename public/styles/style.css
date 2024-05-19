@@ -10,6 +10,13 @@
     font-size: 13px;
   }
 }
+a,
+button,
+input,
+img {
+  -webkit-tap-highlight-color: transparent;
+}
+
 a {
   text-decoration: none;
   color: black;
