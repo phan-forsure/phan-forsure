@@ -16,6 +16,13 @@ $accent: #3d9ef8;
 $accent-dark: #247aca;
 $accent-sec: indianred;
 $accent-sec-dark: #bc5555;
+a,
+button,
+input,
+img {
+    -webkit-tap-highlight-color: transparent;
+}
+
 a {
     text-decoration: none;
     color: black;
