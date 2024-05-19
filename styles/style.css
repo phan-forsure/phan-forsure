@@ -59,7 +59,7 @@ header ul li a {
 }
 @media (max-width: 767px) {
   header ul li a {
-    padding: 0.5em 1em;
+    padding: 0.5em;
   }
 }
 header ul li a:hover {
@@ -212,7 +212,6 @@ footer p {
   text-align: center;
 }
 .details button {
-  padding: 1em;
   margin: 1em 0;
   width: 40%;
   height: 20%;
@@ -328,6 +327,7 @@ section.form form #submit:hover {
 @media (max-width: 767px) {
   .cart-items div.items .item {
     width: 100%;
+    margin: 0 0 1em;
   }
 }
 .cart-items div.items .item:hover {

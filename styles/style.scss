@@ -1,4 +1,4 @@
-@use '../../../../Personal Frameworks/Framework 1/vars.scss' as *;
+@use 'vars.scss' as *;
 * {
     font-family: Cairo, sans-serif;
     box-sizing: border-box;
@@ -60,7 +60,7 @@ header {
                 align-items: center;
                 cursor: pointer;
                 @include query(mobile) {
-                    padding: .5em 1em;
+                    padding: .5em;
                 }
                 &:hover {
                     opacity: 1;
@@ -212,7 +212,6 @@ footer {
     }
     button {
         $d: 40%;
-        padding: 1em;
         margin: 1em 0;
         width: 40%;
         height: calc($d / 2);
@@ -311,6 +310,7 @@ section.form {
             width: calc((100% / 2) - 4em);
             @include query(mobile) {
                 width: 100%;
+                margin: 0 0 1em;
             }
             display: flex;
             justify-content: center;
