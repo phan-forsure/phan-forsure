@@ -5,7 +5,7 @@ import App from './components/App'
 
 const rootElement = ReactDOM.createRoot(document.getElementById('root'))  
 rootElement.render(
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
         <App />
     </Router>
 )
