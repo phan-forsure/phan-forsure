@@ -5,6 +5,13 @@
   margin: 0;
 }
 
+a,
+button,
+input,
+img {
+ -webkit-tap-highlight-color: transparent;
+}
+
 @media (max-width: 767px) {
   :root {
     font-size: 13px;
