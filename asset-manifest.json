@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/phan-forsure/static/js/main.330f2f12.js",
+    "main.js": "/phan-forsure/static/js/main.197785bb.js",
     "index.html": "/phan-forsure/index.html",
-    "main.330f2f12.js.map": "/phan-forsure/static/js/main.330f2f12.js.map"
+    "main.197785bb.js.map": "/phan-forsure/static/js/main.197785bb.js.map"
   },
   "entrypoints": [
-    "static/js/main.330f2f12.js"
+    "static/js/main.197785bb.js"
   ]
 }
