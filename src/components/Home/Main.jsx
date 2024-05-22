@@ -1,15 +1,24 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Main = () => {
-        return (
-            <section className='comp about'>
+
+    return (
+        <section className='comp about'>
+            <div className='text'>
                 <div>
-                ترحب بكم مطعم دلع كرشك الرائع بأجوائه العربية الأصيلة والمذاقات الشهية التي تأسر الحواس. يعتبر مطعم النخيل وجهة مثالية لعشاق المأكولات الشرقية والعربية في قلب المدينة. يقدم المطعم تشكيلة متنوعة من الأطباق الشهية التي تناسب جميع الأذواق، بدءًا من المقبلات اللذيذة إلى الأطباق الرئيسية المتنوعة وحتى الحلويات الشهية.
-                تتميز تجربة تناول الطعام في مطعم النخيل بجوه الدافئ والضيافة العربية الأصيلة، حيث يمكنكم الاستمتاع بأجواء مريحة وتجربة طهي فريدة من نوعها. يضم المطعم أيضًا فريق محترف من الطهاة الذين يعملون بكل اهتمام لتقديم أشهى الأطباق بأجود المكونات.
-                سواء كنتم تبحثون عن وجبة شهية مع العائلة أو مكانًا رومانسيًا لتناول العشاء، فإن مطعم النخيل يوفر لكم البيئة المثالية للاستمتاع بتجربة طعام لا تُنسى. تفضلوا بزيارتنا اليوم واستمتعوا برحلة مذاقات لا مثيل لها.
+                    <h1>اطلب ما تشتهى من <span>طعام بضغطه واحدة</span> </h1>
+                    <p>هنا في موقع دلع كرشك نوفر لك تجربة لا مثيل لها</p>
                 </div>
-            </section>
-        )
+                <Link to={'/Products'}>اطلب الان</Link>    
+            </div>
+            <div className='background'>
+                <img className='img-1' src="https://img.freepik.com/premium-photo/koshari-egyptian-cuisine-white-plate_864588-11238.jpg" alt="طبق كشري" />
+                <img className='img-2' src="https://img.freepik.com/premium-photo/koshari-egyptian-cuisine-white-plate_864588-11238.jpg" alt="طبق كشري" />
+                <img className='img-3' src="https://img.freepik.com/premium-photo/koshari-egyptian-cuisine-white-plate_864588-11238.jpg" alt="طبق كشري" />
+            </div>
+        </section>
+    )
 }
 
 export default Main

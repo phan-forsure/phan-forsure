@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const products = {
     molokhia: 'مولوخيه',
@@ -21,34 +21,24 @@ const Item = ({ name, price, availability, src, id }) => {
             <div>
                 <h2>Product Info:</h2>
                 <p>اسم المنتج: {name}</p>
-                <p>${price} :سعر المنتج</p>
+                <p>$<span>{price}</span> :سعر المنتج</p>
                 <p>{availability} :متاح حاليا</p>
             </div>
         </div>
     )
 }
 
-const Items = () => {
+const elements = [1, 2, 3, 4];
+
+const Items = ({ refer }) => {
     return (
         <section className="comp cart-items">
             <h2 className="title">سلة المشتريات</h2>
 
-            <div className="items">
-                <Item id='molk' name={products.molokhia} src={products.molokhiaSrc} price={products.molokhiaPrice} availability={2} />
-                <Item id='molk' name={products.molokhia} src={products.molokhiaSrc} price={products.molokhiaPrice} availability={2} />
-                <Item id='molk' name={products.molokhia} src={products.molokhiaSrc} price={products.molokhiaPrice} availability={2} />
-                <Item id='molk' name={products.molokhia} src={products.molokhiaSrc} price={products.molokhiaPrice} availability={2} />
-                <Item id='molk' name={products.molokhia} src={products.molokhiaSrc} price={products.molokhiaPrice} availability={2} />
-                
-                <Item id='koshari' name={products.koshari} src={products.koshariSrc} price={products.koshariPrice} availability={1} />
-                <Item id='koshari' name={products.koshari} src={products.koshariSrc} price={products.koshariPrice} availability={1} />
-                <Item id='koshari' name={products.koshari} src={products.koshariSrc} price={products.koshariPrice} availability={1} />
-                <Item id='koshari' name={products.koshari} src={products.koshariSrc} price={products.koshariPrice} availability={1} />
-            
-                <Item id='bean' name={products.beans} src={products.beanSrc} price={products.beansPrice} availability={5} />
-                <Item id='bean' name={products.beans} src={products.beanSrc} price={products.beansPrice} availability={5} />
-                <Item id='bean' name={products.beans} src={products.beanSrc} price={products.beansPrice} availability={5} />
-                <Item id='bean' name={products.beans} src={products.beanSrc} price={products.beansPrice} availability={5} />
+            <div className="items" ref={refer} >
+                {elements.map((val) => <Item key={val} id='molk' name={products.molokhia} src={products.molokhiaSrc} price={products.molokhiaPrice} availability={2} />)}
+                {elements.map((val) => <Item key={val} id='koshari' name={products.koshari} src={products.koshariSrc} price={products.koshariPrice} availability={1} />)}
+                {elements.map((val) => <Item id='bean' key={val} name={products.beans} src={products.beanSrc} price={products.beansPrice} availability={5} />)}
             </div>
         </section>
     )

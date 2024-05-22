@@ -12,8 +12,7 @@ const App = () => {
         <div className="app">
             <Header logo='دلع كرشك'/>
             <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/Home' element={<Home />} />
+                {['Home', ''].map((path) => <Route exact key={path} path={path} element={<Home />} />)}
                 <Route path='/Login' element={<Login />} />
                 <Route path='/Cart' element={<Cart />} />
                 <Route path='/Products' element={<ProductsPage />} />

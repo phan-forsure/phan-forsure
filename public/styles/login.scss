@@ -1,0 +1,41 @@
+@use 'vars.scss' as *;
+section.form {
+    grid-area: form;
+    display: flex;
+    justify-content: center;
+    padding: $padding-md;
+    form {
+        width: 40%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: $padding-md;
+        @include query(mobile) {
+            width: 80%;
+        }
+        input {
+            padding: $padding-sm;
+            border: $accent 2px solid;
+            outline: none;
+            width: 100%;
+            margin: 0 0 3em;
+            transition: all .3s;
+        }
+        label {
+            width: 100%;
+            display: block;
+        }
+        #submit {
+            margin-top: 2em;
+            width: 50%;
+            border: none;
+            background-color: #ddd;
+            cursor: pointer;
+            transition: all .2s;
+            &:hover {
+                background-color: $accent-dark;
+                color: #eee;
+            }
+        }
+    }
+}

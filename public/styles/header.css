@@ -1,0 +1,51 @@
+.logo {
+  padding: 1em 2em;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+@media (max-width: 767px) {
+  .logo {
+    padding: 0.5em 1em;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-area: head;
+  height: 5em;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+header ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 100%;
+}
+header ul li a {
+  opacity: 0.8;
+  padding: 1em 1.75em;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 0px solid #aaa;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  header ul li a {
+    padding: 0.5em 1em;
+  }
+}
+header ul li a:hover {
+  opacity: 1;
+  border-bottom: 5px solid #aaa;
+}
+header ul .active {
+  opacity: 1;
+  border-bottom: 5px solid #aaa;
+}/*# sourceMappingURL=header.css.map */

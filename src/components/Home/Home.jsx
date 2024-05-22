@@ -1,16 +1,14 @@
 import React from 'react'
-import Nav from './Nav'
+import Nav from './About'
 import Main from './Main'
-import Footer from '../Footer'
 import Products from './Products'
 
 const Home = () => {
     return (
         <>
-        <Nav />
         <Main />
+        <Nav />
         <Products />
-        <Footer />
         </>
     )
 }

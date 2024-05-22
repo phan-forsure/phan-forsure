@@ -8,7 +8,7 @@ const Details = ({ name, price, method }) => {
                 <p>طبق {name} مصري اصيل</p>
                 <p>${price} :السعر</p>
             </div>
-            <button className='add'>Add to Cart</button>
+            <button onClick={method} className='add'>Add to Cart</button>
             <button onClick={method} className='exit'>Cancel</button>
         </div>
     )

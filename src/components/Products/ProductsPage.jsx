@@ -9,4 +9,7 @@ const ProductsPage = () => {
     )
 }
 
+// idea: categories and conditional rendering based on which category is chosen
+// categories: high protein, diet
+
 export default ProductsPage
