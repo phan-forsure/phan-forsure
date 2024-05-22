@@ -4,6 +4,9 @@ section.checkout {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 'h2 h2' 'form info';
+    @include query(mobile) {
+        grid-template-areas: 'h2 h2' 'info info' 'form form';
+    }
     h2 {
         width: 100%;
         height: fit-content;
@@ -18,6 +21,9 @@ section.checkout {
         height: fit-content;
         text-align: end;
         font-size: 1.3em;
+        @include query(mobile) {
+            text-align: center;
+        }
     }
     h3 {
         font-size: 1.5em;
@@ -34,6 +40,10 @@ section.checkout {
         justify-content: center;
         align-content: center;
         flex-wrap: wrap;
+        @include query(mobile) {
+            padding-top: $padding-lg;
+            padding-bottom: $padding-sm;
+        }
     }
     form {
         grid-area: form;
@@ -41,6 +51,9 @@ section.checkout {
         justify-content: center;
         flex-wrap: wrap;
         padding: $padding-lg;
+        @include query(mobile) {
+            padding-top: $padding-sm;
+        }
         div {
             width: 100%;
             display: flex;

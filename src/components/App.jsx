@@ -12,14 +12,10 @@ const App = () => {
         <div className="app">
             <Header logo='دلع كرشك'/>
             <Routes>
-                {['Home', ''].map((path) => <Route key={path} path={path} element={<Home />} />)}
+                {['Home', '/'].map((path) => <Route key={path} path={path} element={<Home />} />)}
                 <Route path='/Login' element={<Login />} />
                 <Route path='/Cart' element={<Cart />} />
                 <Route path='/Products' element={<ProductsPage />} />
-                <Route
-                    path="*"
-                    element={<Home to="/" replace />}
-                />
             </Routes>
             <Footer />
         </div>

@@ -36,7 +36,7 @@ const Payment = () => {
                     <option value="Paypal">Paypal</option>
                 </select>
             </div>
-            <input type="submit" value={'ادفع'}/>
+            <input type="submit" value={'ادفع'} onClick={e => e.preventDefault()}/>
         </form>
     )
 }

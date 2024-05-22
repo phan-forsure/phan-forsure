@@ -12,7 +12,7 @@ const Form = () => {
                 <input type="password" id="password" placeholder="الرمز" required/>
                 <label htmlFor="confirm">تأكيد الرمز:</label>
                 <input type="password" id="confirm" placeholder="تأكيد الرمز" required/>
-                <input type="submit" id="submit"/>
+                <input type="submit" id="submit" onClick={e => e.preventDefault()}/>
             </form>
         </section>
     )
