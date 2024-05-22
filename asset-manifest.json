@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/static/js/main.bd66bf25.js",
-    "index.html": "/index.html",
-    "main.bd66bf25.js.map": "/static/js/main.bd66bf25.js.map"
+    "main.js": "/phan-forsure/static/js/main.bd66bf25.js",
+    "index.html": "/phan-forsure/index.html",
+    "main.bd66bf25.js.map": "/phan-forsure/static/js/main.bd66bf25.js.map"
   },
   "entrypoints": [
     "static/js/main.bd66bf25.js"
