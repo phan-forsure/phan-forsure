@@ -4,6 +4,11 @@ section.checkout {
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: "h2 h2" "form info";
 }
+@media (max-width: 767px) {
+  section.checkout {
+    grid-template-areas: "h2 h2" "info info" "form form";
+  }
+}
 section.checkout h2 {
   width: 100%;
   height: -moz-fit-content;
@@ -21,6 +26,12 @@ section.checkout h3 {
   text-align: end;
   font-size: 1.3em;
 }
+@media (max-width: 767px) {
+  section.checkout p,
+  section.checkout h3 {
+    text-align: center;
+  }
+}
 section.checkout h3 {
   font-size: 1.5em;
   width: 75%;
@@ -37,12 +48,23 @@ section.checkout div.current-items {
   align-content: center;
   flex-wrap: wrap;
 }
+@media (max-width: 767px) {
+  section.checkout div.current-items {
+    padding-top: 3em;
+    padding-bottom: 1em;
+  }
+}
 section.checkout form {
   grid-area: form;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   padding: 3em;
+}
+@media (max-width: 767px) {
+  section.checkout form {
+    padding-top: 1em;
+  }
 }
 section.checkout form div {
   width: 100%;
