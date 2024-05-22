@@ -12,10 +12,10 @@ const App = () => {
         <div className="app">
             <Header logo='دلع كرشك'/>
             <Routes>
-                {['Home', ''].map((path) => <Route key={path} path={`/phan-forsure/${path}`} element={<Home />} />)}
-                <Route path='/phan-forsure/Login' element={<Login />} />
-                <Route path='/phan-forsure/Cart' element={<Cart />} />
-                <Route path='/phan-forsure/Products' element={<ProductsPage />} />
+                {['Home', ''].map((path) => <Route key={path} path={`/${path}`} element={<Home />} />)}
+                <Route path='/Login' element={<Login />} />
+                <Route path='/Cart' element={<Cart />} />
+                <Route path='/Products' element={<ProductsPage />} />
             </Routes>
             <Footer />
         </div>
