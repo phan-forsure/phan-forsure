@@ -12,8 +12,8 @@ const Links = () => {
     }, [active])
 
     return links.map((link) => <li onClick={() => setActive('')} key={link}><Link
-    className={pathname.slice(1) === link
-    ? active : ''} to={`/${link}`}>{link}</Link></li>)
+    className={pathname.slice(14) === link
+    ? active : ''} to={`/phan-forsure/${link}`}>{link}</Link></li>)
 }
 
 const Header = ({ logo }) => {
