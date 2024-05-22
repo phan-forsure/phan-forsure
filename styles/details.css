@@ -14,8 +14,8 @@
 }
 @media (max-width: 767px) {
   .details {
-    width: 65%;
-    height: 55%;
+    width: 80%;
+    height: 32%;
   }
 }
 .details .info {

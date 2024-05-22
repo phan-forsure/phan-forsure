@@ -12,8 +12,8 @@
     width: 50%;
     height: 60%;
     @include query(mobile) {
-        width: 65%;
-        height: 55%;
+        width: 80%;
+        height: 32%;
     }
     padding: $padding-sm;
     .info {
