@@ -1,0 +1,50 @@
+@use '../../public/styles/vars' as *;
+.logo {
+    padding: $padding-sm $padding-md;
+    font-size: 1.1em;
+    font-weight: bold;
+    @include query(mobile) {
+        padding: $padding-sm / 2 $padding-sm;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: head;
+    height: 5em;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        height: 100%;
+        li {
+            a {
+                opacity: .8;
+                padding: $padding-sm $padding-md - .25em;
+                transition: all .2s ease-in-out;
+                border-bottom: 0px solid #aaa;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                @include query(mobile) {
+                    padding: $padding-sm / 2 $padding-sm;
+                }
+                &:hover {
+                    opacity: 1;
+                    border-bottom: 5px solid #aaa;
+                }
+            }
+        }
+        .active {
+            opacity: 1;
+            border-bottom: 5px solid #aaa;
+        }
+    }
+}

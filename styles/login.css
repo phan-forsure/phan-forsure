@@ -1,0 +1,42 @@
+section.form {
+  grid-area: form;
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+}
+section.form form {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 2em;
+}
+@media (max-width: 767px) {
+  section.form form {
+    width: 80%;
+  }
+}
+section.form form input {
+  padding: 1em;
+  border: #3d9ef8 2px solid;
+  outline: none;
+  width: 100%;
+  margin: 0 0 3em;
+  transition: all 0.3s;
+}
+section.form form label {
+  width: 100%;
+  display: block;
+}
+section.form form #submit {
+  margin-top: 2em;
+  width: 50%;
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+section.form form #submit:hover {
+  background-color: #247aca;
+  color: #eee;
+}/*# sourceMappingURL=login.css.map */

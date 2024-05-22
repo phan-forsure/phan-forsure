@@ -11,13 +11,6 @@
     font-size: 13px;
   }
 }
-a,
-button,
-input,
-img {
-  -webkit-tap-highlight-color: transparent;
-}
-
 a {
   text-decoration: none;
   color: black;
@@ -27,67 +20,17 @@ a {
   margin: 2em 4em;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: "head head head head" "hero hero hero hero" "form form form form" "cart cart cart cart" "check check check check" "nav main main main" "prod prod prod prod" "foot foot foot foot";
+  grid-template-areas: "head head head head" "hero hero hero hero" "form form form form" "cart cart cart cart" "check check check check" "main main main main" "nav nav nav nav" "prod prod prod prod" "foot foot foot foot";
 }
 @media (max-width: 767px) {
   .app {
     margin: 0;
-    grid-template-areas: "head head head head" "hero hero hero hero" "form form form form" "cart cart cart cart" "check check check check" "main main main main" "nav nav nav nav" "prod prod prod prod" "foot foot foot foot";
   }
 }
 
 .comp {
   background-color: #eee;
   margin: 0.75em;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  grid-area: head;
-  height: 5em;
-}
-header ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  height: 100%;
-}
-header ul li a {
-  opacity: 0.8;
-  padding: 1em 1.5em;
-  transition: all 0.2s ease-in-out;
-  border-bottom: 0px solid #aaa;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-@media (max-width: 767px) {
-  header ul li a {
-    padding: 0.5em;
-  }
-}
-header ul li a:hover {
-  opacity: 1;
-  border-bottom: 5px solid #aaa;
-}
-header ul .active {
-  opacity: 1;
-  border-bottom: 5px solid #aaa;
-}
-
-.logo {
-  padding: 1em 2em;
-  font-size: 1.1em;
-  font-weight: bold;
-}
-@media (max-width: 767px) {
-  .logo {
-    padding: 0.5em 1em;
-  }
 }
 
 img.koshari,
@@ -103,60 +46,15 @@ img.bean {
   }
 }
 
-section.products {
-  background-color: transparent !important;
-  grid-area: prod;
-}
-section.products h2.title {
-  padding: 1em;
-  background-color: #eee;
-  text-align: center;
-  width: 100%;
-}
-section.products div.products {
-  display: flex;
-  overflow: auto;
-}
-section.products div.products .product {
-  margin: 1em 2em;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.2s;
-  position: relative;
-  bottom: 0;
-}
-section.products div.products .product:hover {
-  bottom: 10px;
-}
-section.products div.products .product > div {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 1.5em;
-  background-color: #eee;
-  width: 20em;
-  height: 10em;
-}
-section.products div.products .product > div p,
-section.products div.products .product > div span {
-  width: 100%;
-  text-align: center;
-}
-section.products div.products .product > div span {
-  font-size: 0.8em;
-  margin: 2em 1em 0;
-}
-
-nav {
+section.abt {
   grid-area: nav;
-  padding: 1.5em;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-
-section.about {
-  grid-area: main;
-  padding: 2.5em;
+section.abt div {
+  padding: 1em;
 }
 
 footer {
@@ -186,194 +84,15 @@ footer p {
   background: #247aca;
 }
 
-.details {
-  background-color: #ddd;
-  position: fixed;
-  z-index: 10;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  width: 50%;
-  height: 50%;
-  padding: 1em;
-}
-@media (max-width: 767px) {
-  .details {
-    width: 75%;
-    height: 30%;
-  }
-}
-.details .info {
-  padding: 1em;
-  width: 100%;
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
-}
-.details .info p {
-  width: 100%;
-  text-align: center;
-}
-.details button {
-  margin: 1em 0;
-  width: 40%;
-  height: 20%;
-  transition: all 0.2s;
-  border: none;
-  cursor: pointer;
-}
-.details button:hover {
-  color: #eee;
-}
-.details .add {
-  background-color: #eee;
-}
-.details .add:hover {
-  background-color: #247aca;
-}
-.details .exit {
-  background-color: #eee;
-}
-.details .exit:hover {
-  background-color: #bc5555;
-}
-
 section.hero {
   grid-area: hero;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 2.5em;
+  padding: 3em;
 }
 section.hero h1,
 section.hero p {
   width: 100%;
   text-align: center;
-}
-
-section.form {
-  grid-area: form;
-  display: flex;
-  justify-content: center;
-  padding: 2.5em;
-}
-section.form form {
-  width: 40%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-@media (max-width: 767px) {
-  section.form form {
-    width: 80%;
-  }
-}
-section.form form input {
-  padding: 1em;
-  border: #3d9ef8 2px solid;
-  outline: none;
-  width: 100%;
-  margin: 0 0 3em;
-  transition: all 0.3s;
-}
-section.form form label {
-  width: 100%;
-  display: block;
-}
-section.form form #submit {
-  margin-top: 2em;
-  width: 50%;
-  border: none;
-  background-color: #ddd;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-section.form form #submit:hover {
-  background-color: #247aca;
-  color: #eee;
-}
-
-.cart-items {
-  grid-area: cart;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-.cart-items h2.title {
-  width: 100%;
-  padding: 1em;
-  text-align: center;
-  background-color: #ddd;
-  margin: 0 0 1em;
-}
-.cart-items div.items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
-}
-.cart-items div.items .item {
-  width: calc(50% - 4em);
-  display: flex;
-  justify-content: center;
-  align-content: flex-start;
-  flex-wrap: wrap;
-  margin: 2em;
-  background-color: #ddd;
-  transition: all 0.2s;
-  position: relative;
-  bottom: 0;
-  opacity: 0.85;
-  cursor: pointer;
-}
-@media (max-width: 767px) {
-  .cart-items div.items .item {
-    width: 100%;
-    margin: 0 0 1em;
-  }
-}
-.cart-items div.items .item:hover {
-  bottom: 5;
-  opacity: 1;
-}
-.cart-items div.items .item div {
-  padding: 1em;
-  margin-bottom: 1em;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.cart-items div.items .item div p,
-.cart-items div.items .item div h2 {
-  width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
-  text-align: center;
-  padding: 0.25em;
-}
-.cart-items div.items .item div.img-container {
-  width: 100%;
-  background-color: white;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-}
-
-section.checkout {
-  grid-area: check;
-  padding: 2.5em;
-}
-section.checkout p,
-section.checkout h2 {
-  width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
-  text-align: center;
-  padding: 0.25em;
 }/*# sourceMappingURL=style.css.map */

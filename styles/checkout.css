@@ -1,0 +1,70 @@
+section.checkout {
+  grid-area: check;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "h2 h2" "form info";
+}
+section.checkout h2 {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+  padding: 1em;
+  background-color: #ddd;
+  grid-area: h2;
+}
+section.checkout p,
+section.checkout h3 {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: end;
+  font-size: 1.3em;
+}
+section.checkout h3 {
+  font-size: 1.5em;
+  width: 75%;
+}
+section.checkout p {
+  margin: 0.5em 0;
+}
+section.checkout div.current-items {
+  grid-area: info;
+  padding: 3em;
+  padding-top: 1em;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+section.checkout form {
+  grid-area: form;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 3em;
+}
+section.checkout form div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+section.checkout form input,
+section.checkout form select {
+  padding: 1em;
+  outline: none;
+  border: 2px solid #3d9ef8;
+  margin: 1em;
+  width: 100%;
+}
+section.checkout form input[type=submit] {
+  border: none;
+  background-color: #3d9ef8;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+section.checkout form input[type=submit]:hover {
+  background-color: #247aca;
+}/*# sourceMappingURL=checkout.css.map */

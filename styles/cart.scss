@@ -1,0 +1,62 @@
+@use 'vars.scss' as *;
+.cart-items {
+    grid-area: cart;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: fit-content;
+    h2.title {
+        width: 100%;
+        padding: $padding-sm;
+        text-align: center;
+        background-color: #ddd;
+        margin: 0 0 1em;
+    }
+    div.items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        .item {
+            width: calc((100% / 2) - 4em);
+            @include query(mobile) {
+                width: 100%;
+            }
+            display: flex;
+            justify-content: center;
+            align-content: flex-start;
+            flex-wrap: wrap;
+            margin: 2em;
+            background-color: #ddd;
+            transition: all .2s;
+            position: relative;
+            bottom: 0;
+            opacity: .85;
+            cursor: pointer;
+            &:hover {
+                bottom: 5;
+                opacity: 1;
+            }
+            div {
+                padding: $padding-sm;
+                margin-bottom: 1em;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                p,
+                h2 {
+                    width: 100%;
+                    height: fit-content;
+                    text-align: center;
+                    padding: .25em;
+                }
+            }
+            div.img-container {
+                width: 100%;
+                background-color: white;
+                display: flex;
+                align-content: center;
+                justify-content: center;
+            }
+        }
+    }
+}
