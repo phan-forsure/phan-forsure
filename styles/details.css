@@ -8,14 +8,23 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  width: 50%;
-  height: 60%;
+  align-items: center;
+  width: 65%;
+  height: 55%;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
   padding: 1em;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .details {
+    width: 70%;
+    height: 50%;
+  }
 }
 @media (max-width: 767px) {
   .details {
     width: 80%;
-    height: 32%;
+    height: 40%;
   }
 }
 .details .info {
@@ -30,7 +39,7 @@
 .details .info p {
   width: 100%;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 .details button {
   padding: 1em;
@@ -39,7 +48,13 @@
   height: 20%;
   transition: all 0.2s;
   border: none;
+  font-size: 1.2em;
   cursor: pointer;
+}
+@media (max-width: 767px) {
+  .details button {
+    font-size: 1em;
+  }
 }
 .details button:hover {
   color: #eee;
