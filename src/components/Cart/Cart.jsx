@@ -8,8 +8,8 @@ export const FullPriceContext = createContext(null)
 
 const Cart = () => {
     const [itemCount, setItemCount] = useState(0)
-    let lengthRef = useRef(null)
     let [result, setResult] = useState(0)
+    let lengthRef = useRef(null)
     
     useEffect(() => {
         setItemCount(lengthRef.current.childElementCount)
@@ -25,7 +25,8 @@ const Cart = () => {
         <CountContext.Provider value={itemCount}>
             <FullPriceContext.Provider value={result}>
                 <Section />
-                <Items refer={lengthRef} />
+                <Items refer={lengthRef} setCount={setItemCount} setPrice={setResult} 
+                    item={document.querySelectorAll('.item > div > p > span')} />
                 <Checkout />
             </FullPriceContext.Provider>
         </CountContext.Provider>

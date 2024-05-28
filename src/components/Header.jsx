@@ -6,7 +6,6 @@ const links = ['Home', 'Cart', 'Products', 'Login']
 const Links = () => {
     const { pathname } = useLocation()
     const [active, setActive] = useState('')
-    console.log(pathname.slice(1))
 
     useEffect(() => {
         setActive('active')

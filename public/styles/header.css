@@ -44,6 +44,7 @@ header ul li a {
 header ul li a:hover {
   opacity: 1;
   border-bottom: 5px solid #aaa;
+  background-color: #ddd;
 }
 header ul .active {
   opacity: 1;

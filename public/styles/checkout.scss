@@ -4,6 +4,9 @@ section.checkout {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 'h2 h2' 'form info';
+    @include query(tablet) {
+        grid-template-areas: 'h2 h2' 'info info' 'form form';
+    }
     @include query(mobile) {
         grid-template-areas: 'h2 h2' 'info info' 'form form';
     }
@@ -17,32 +20,47 @@ section.checkout {
     }
     p,
     h3 {
-        width: 100%;
         height: fit-content;
         text-align: end;
         font-size: 1.3em;
+        @include query(tablet) {
+            text-align: center;
+        }
         @include query(mobile) {
             text-align: center;
         }
     }
     h3 {
         font-size: 1.5em;
-        width: 75%;
+        width: 65%;
     }
     p {
         margin: .5em 0;
+        width: 70%;
     }
     div.current-items {
         grid-area: info;
-        padding: $padding-lg;
+        padding: $padding-md;
         padding-top: $padding-sm;
         display: flex;
         justify-content: center;
         align-content: center;
         flex-wrap: wrap;
+        @include query(tablet) {
+            padding-top: $padding-lg;
+            padding-bottom: $padding-sm;
+        }
         @include query(mobile) {
             padding-top: $padding-lg;
             padding-bottom: $padding-sm;
+        }
+        div.items {
+            width: 100%;
+            padding: 0 $padding-sm;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 1em;
         }
     }
     form {
@@ -51,13 +69,15 @@ section.checkout {
         justify-content: center;
         flex-wrap: wrap;
         padding: $padding-lg;
+        @include query(tablet) {
+            padding-top: $padding-sm;
+        }
         @include query(mobile) {
             padding-top: $padding-sm;
         }
         div {
             width: 100%;
             display: flex;
-            justify-content: center;
             flex-wrap: wrap;
         }
         input,
@@ -65,12 +85,15 @@ section.checkout {
             padding: $padding-sm;
             outline: none;
             border: 2px solid $accent;
-            margin: 1em;
             width: 100%;
+        }
+        label {
+            margin: .5em 0 0 0;
         }
         input[type="submit"] {
             border: none;
             background-color: $accent;
+            margin: 2em 0 0;
             color: white;
             cursor: pointer;
             transition: all .2s;

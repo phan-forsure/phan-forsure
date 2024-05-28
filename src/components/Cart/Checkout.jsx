@@ -28,15 +28,19 @@ const Payment = () => {
     }
 
     return (
-        <form action="">
+        <form action="" autoComplete="true" id='checkout'>
             <div>
-                <input type="number" placeholder={`${holder ? holder : 'Card'} Number`} required/> 
-                <select ref={card} onChange={HandleSelect} name="" id="">
+                <label htmlFor="phone">رقم الهاتف</label>
+                <input id="phone" type="number" placeholder={`رقم الهاتف`} required/> 
+                <label htmlFor="card-number">رقم البطاقه</label>
+                <input id="card-number" type="number" placeholder={`${holder ? holder : 'البطاقه الاتمانيه'}`} required/> 
+                <label htmlFor="card-type">البطاقه</label>
+                <select ref={card} onChange={HandleSelect} id="card-type">
                     <option value="Visa">Visa</option>
                     <option value="Paypal">Paypal</option>
                 </select>
             </div>
-            <input type="submit" value={'ادفع'} onClick={e => e.preventDefault()}/>
+            <input type="submit" value={'اطلب الان'} onClick={e => e.preventDefault()}/>
         </form>
     )
 }

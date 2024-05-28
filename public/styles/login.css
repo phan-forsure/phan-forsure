@@ -11,6 +11,11 @@ section.form form {
   justify-content: center;
   padding-top: 2em;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  section.form form {
+    width: 80%;
+  }
+}
 @media (max-width: 767px) {
   section.form form {
     width: 80%;

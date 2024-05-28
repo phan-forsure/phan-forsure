@@ -1,0 +1,92 @@
+@use 'vars.scss' as *;
+section.category {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: search;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: 'btn btn btn btn title title';
+    @include query(tablet) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 'title title' 'btn btn';
+    }
+    @include query(mobile) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 'title title' 'btn btn';
+    }
+    h3 {
+        padding: $padding-md;
+        grid-area: title;
+        text-align: end;
+        @include query(tablet) {
+            background-color: #ddd;
+            padding: $padding-sm;
+            text-align: center;
+        }
+        @include query(mobile) {
+            background-color: #ddd;
+            padding: $padding-sm;
+            text-align: center;
+            font-size: 1.5em;
+        }
+    }
+    div {
+        padding: $padding-sm;
+        grid-area: btn;
+        button {
+            padding: $padding-sm;
+            border: none;
+            outline: none;
+            background-color: $accent;
+            color: white;
+            transition: all .2s;
+            margin: 1em;
+            width: 17em;
+            cursor: pointer;
+            position: relative;
+            @include query(tablet) {
+                width: calc(50% - 2em);
+            }
+            @include query(mobile) {
+                width: calc(50% - 2em);
+            }
+            &:hover {
+                background-color: $accent-dark;
+            }
+        }
+        button#select>ul {
+            list-style: none;
+            position: absolute;
+            transition: all .2s;
+            background-color: $accent;
+            width: 100%;
+            right: 0;
+            top: 52px;
+            z-index: 10;
+            li {
+                transition: all .2s;
+                padding: $padding-sm / 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $accent;
+                &:hover {
+                    background-color: $accent-dark;
+                    padding: $padding-md;
+                }
+            }
+        }
+        ul.closed {
+            height: 0vh;
+            li {
+                opacity: 0;
+                height: 0;
+                padding: 0 !important;
+            }
+        }
+        ul.open li {
+            opacity: 1;
+            height: 5.5vh;
+        }
+    }
+}

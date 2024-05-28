@@ -3,7 +3,7 @@ import React from "react";
 const Form = () => {
     return (
         <section className="comp form">
-            <form action="">
+            <form action="" autoComplete="true" id='login'>
                 <label htmlFor="name">الاسم:</label>
                 <input type="text" id="name" placeholder="الاسم" required autoComplete="true"/>
                 <label htmlFor="email">البريد الالكتروني:</label>

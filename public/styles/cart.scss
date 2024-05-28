@@ -16,13 +16,17 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: start;
+        width: 100%;
         .item {
             width: calc((100% / 2) - 4em);
             @include query(mobile) {
                 width: 100%;
             }
+            @include query(tablet) {
+                width: 100%;
+            }
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
             align-content: flex-start;
             flex-wrap: wrap;
             margin: 2em;
@@ -38,10 +42,10 @@
             }
             div {
                 padding: $padding-sm;
-                margin-bottom: 1em;
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
+                width: 100%;
                 p,
                 h2 {
                     width: 100%;
@@ -56,6 +60,18 @@
                 display: flex;
                 align-content: center;
                 justify-content: center;
+            }
+            button {
+                padding: $padding-sm / 2;
+                margin: 1em;
+                border: none;
+                cursor: pointer;
+                color: white;
+                background-color: $accent;
+                transition: all .2s;
+                &:hover {
+                    background-color: $accent-dark;
+                }
             }
         }
     }

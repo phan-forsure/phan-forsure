@@ -2,7 +2,7 @@ import React from 'react'
 
 const Details = ({ name, price, method }) => {
     return (
-        <div className="details">
+        <div style={{animation: 'fadeIn .2s'}} className="details">
             <h2>Product Details</h2>
             <div className='info'>
                 <p>طبق {name} مصري اصيل</p>

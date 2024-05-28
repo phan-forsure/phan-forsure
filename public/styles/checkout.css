@@ -4,6 +4,11 @@ section.checkout {
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: "h2 h2" "form info";
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  section.checkout {
+    grid-template-areas: "h2 h2" "info info" "form form";
+  }
+}
 @media (max-width: 767px) {
   section.checkout {
     grid-template-areas: "h2 h2" "info info" "form form";
@@ -20,11 +25,16 @@ section.checkout h2 {
 }
 section.checkout p,
 section.checkout h3 {
-  width: 100%;
   height: -moz-fit-content;
   height: fit-content;
   text-align: end;
   font-size: 1.3em;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  section.checkout p,
+  section.checkout h3 {
+    text-align: center;
+  }
 }
 @media (max-width: 767px) {
   section.checkout p,
@@ -34,19 +44,26 @@ section.checkout h3 {
 }
 section.checkout h3 {
   font-size: 1.5em;
-  width: 75%;
+  width: 65%;
 }
 section.checkout p {
   margin: 0.5em 0;
+  width: 70%;
 }
 section.checkout div.current-items {
   grid-area: info;
-  padding: 3em;
+  padding: 2em;
   padding-top: 1em;
   display: flex;
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  section.checkout div.current-items {
+    padding-top: 3em;
+    padding-bottom: 1em;
+  }
 }
 @media (max-width: 767px) {
   section.checkout div.current-items {
@@ -54,12 +71,25 @@ section.checkout div.current-items {
     padding-bottom: 1em;
   }
 }
+section.checkout div.current-items div.items {
+  width: 100%;
+  padding: 0 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1em;
+}
 section.checkout form {
   grid-area: form;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   padding: 3em;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  section.checkout form {
+    padding-top: 1em;
+  }
 }
 @media (max-width: 767px) {
   section.checkout form {
@@ -69,7 +99,6 @@ section.checkout form {
 section.checkout form div {
   width: 100%;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 }
 section.checkout form input,
@@ -77,12 +106,15 @@ section.checkout form select {
   padding: 1em;
   outline: none;
   border: 2px solid #3d9ef8;
-  margin: 1em;
   width: 100%;
+}
+section.checkout form label {
+  margin: 0.5em 0 0 0;
 }
 section.checkout form input[type=submit] {
   border: none;
   background-color: #3d9ef8;
+  margin: 2em 0 0;
   color: white;
   cursor: pointer;
   transition: all 0.2s;

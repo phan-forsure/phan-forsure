@@ -9,11 +9,18 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    width: 50%;
-    height: 60%;
+    align-items: center;
+    width: 65%;
+    height: 55%;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    @include query(tablet) {
+        width: 70%;
+        height: 50%;
+    }
     @include query(mobile) {
         width: 80%;
-        height: 32%;
+        height: 40%;
     }
     padding: $padding-sm;
     .info {
@@ -27,7 +34,7 @@
         p {
             width: 100%;
             text-align: center;
-            font-size: 1.2em;
+            font-size: 1.3em;
         }
     }
     button {
@@ -38,7 +45,11 @@
         height: calc($d / 2);
         transition: all .2s;
         border: none;
+        font-size: 1.2em;
         cursor: pointer;
+        @include query(mobile) {
+            font-size: 1em;
+        }
         &:hover {
             color: #eee;
         }

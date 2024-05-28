@@ -22,9 +22,18 @@ a {
     margin: 2em 4em;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: 'head head head head' 'hero hero hero hero' 'form form form form' 'cart cart cart cart' 'check check check check' 'main main main main' 'nav nav nav nav' 'prod prod prod prod' 'foot foot foot foot';
+    grid-template-areas: 'head head head head' 'hero hero hero hero' 'search search search search' 'res res res res' 'form form form form' 'cart cart cart cart' 'check check check check' 'main main main main' 'nav nav nav nav' 'prod prod prod prod' 'foot foot foot foot';
     @include query(mobile) {
         margin: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 
@@ -34,7 +43,8 @@ a {
 }
 
 img.koshari,
-img.bean {
+img.bean,
+img.salad {
     $d: 12em;
     width: $d;
     height: $d;
@@ -53,16 +63,10 @@ section.abt {
     flex-wrap: wrap;
     div {
         padding: $padding-sm;
-    }
-}
-
-footer {
-    grid-area: foot;
-    padding: 5em;
-    h2,
-    p {
-        width: 100%;
-        text-align: center;
+        margin: 1em;
+        p {
+            font-size: 1.2em;
+        }
     }
 }
 
