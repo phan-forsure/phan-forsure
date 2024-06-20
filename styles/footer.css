@@ -1,60 +1,16 @@
 footer {
-  grid-area: foot;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 2em;
-}
-footer div.text {
-  width: 100%;
-  padding: 2em;
-}
-footer div.text h2,
-footer div.text p {
-  width: 100%;
-  text-align: center;
-}
-footer div.column {
-  width: calc(33.3333333333% - 4em);
-  margin: 2em;
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  footer div.column {
-    width: 100%;
-  }
-}
-@media (max-width: 767px) {
-  footer div.column {
-    width: 100%;
-  }
-}
-footer div.column h3 {
-  width: 100%;
-  border-bottom: solid 2px #3d9ef8;
-  padding: 0.5em;
-}
-footer div.column ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 1em;
-}
-footer div.column ul li {
-  width: 100%;
+  padding: 6em;
+  border-top: 1px solid #f3f3f3;
+  color: #2f353a;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
 }
-footer div.column ul li p {
-  opacity: 0.5;
-  cursor: pointer;
-  transition: all 0.2s;
-  width: 100%;
-}
-footer div.column ul li p:hover {
-  opacity: 1;
+footer span {
+  font-size: 2em;
+  font-weight: bold;
 }
 @media (max-width: 767px) {
-  footer div.column ul li p {
-    font-size: 1.3em;
+  footer span {
+    font-size: 1.4em;
   }
 }/*# sourceMappingURL=footer.css.map */

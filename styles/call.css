@@ -1,0 +1,198 @@
+section.call-api div.data-unit, section.call-api div.data-unit div.data .no-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.call-api form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section.call-api form button {
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  cursor: pointer;
+  padding: 1em;
+  border: none;
+  background-color: #00c861;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  font-weight: bold;
+}
+section.call-api form button::before {
+  position: absolute;
+  content: "";
+  background-color: #2f353a;
+  opacity: 1;
+  width: 0;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+section.call-api form button:hover {
+  background-color: #00ba5a;
+}
+section.call-api form button:hover::before {
+  width: 100%;
+}
+
+section.call-api form {
+  width: 100%;
+}
+section.call-api form input[type=text] {
+  background-color: transparent;
+  padding: 1em;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #b5c1ca;
+  opacity: 0.7;
+  width: 50%;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+section.call-api form input[type=text]:focus {
+  border-bottom: 1px solid #b5c1ca;
+  opacity: 1;
+}
+section.call-api form button {
+  width: 15vh;
+}
+section.call-api form button p {
+  font-size: 1em;
+  position: relative;
+  z-index: 2;
+}
+section.call-api form button:hover p {
+  color: #00c861;
+}
+section.call-api .wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+section.call-api .wrapper button {
+  background-color: #00c861;
+  color: #2f353a;
+  margin-top: 0.5em;
+  padding: 1em;
+  border: none;
+  cursor: pointer;
+  width: 15vh;
+}
+section.call-api .wrapper button.clear p {
+  font-weight: bold;
+  font-size: 1em;
+}
+section.call-api .spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #00c861;
+  border-right: 5px solid white;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  animation: spinner 1s infinite ease-in-out;
+  -webkit-animation: spinner 1s infinite ease-in-out;
+}
+section.call-api div.data-unit {
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 4em;
+  margin-top: 4em;
+  border: 1px solid #b5c1ca;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+section.call-api div.data-unit.shrunk {
+  max-height: 175vh;
+  overflow-y: scroll;
+}
+@media (max-width: 767px) {
+  section.call-api div.data-unit {
+    padding: 1em;
+  }
+}
+section.call-api div.data-unit div.data {
+  width: 100%;
+  padding: 1em 0;
+  border-bottom: 1px solid;
+  word-wrap: break-word;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  section.call-api div.data-unit div.data {
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 767px) {
+  section.call-api div.data-unit div.data {
+    font-size: 0.8em;
+  }
+}
+section.call-api div.data-unit div.data p {
+  margin: 0.25em 0;
+}
+section.call-api div.data-unit div.data p > li {
+  padding-left: 1em;
+  list-style: none;
+}
+section.call-api div.data-unit div.data .no-data {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+div.download {
+  width: 100%;
+  margin: 1em 0;
+}
+div.download button.download-file {
+  cursor: pointer;
+  background-color: #00c861;
+  border: none;
+  width: 100%;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+div.download button.download-file a {
+  display: block;
+  padding: 1em;
+  width: 100%;
+  color: #e5edf5;
+}/*# sourceMappingURL=call.css.map */

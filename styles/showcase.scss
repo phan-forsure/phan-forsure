@@ -1,0 +1,61 @@
+@use 'vars.scss' as *;
+section.showcase {
+    div.content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 'one one one' 'two two two';
+        div.wrapper-one {
+            grid-area: one;
+        }
+        div.wrapper-two {
+            grid-area: two;
+            p {
+                text-align: end;
+                width: 85%;
+                @include query(tablet) {
+                    width: unset;
+                }
+                @include query(mobile) {
+                    width: unset;
+                }
+            }
+        }
+        div.text-wrapper {
+            width: 100%;
+            margin: $spacing-sm;
+            @include query(tablet) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            @include query(mobile) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            p {
+                font-size: 1.5em;
+                display: inline-block;
+                @include query(mobile) {
+                    font-size: 1.2em;
+                }
+            }
+        }
+        pre {
+            border-top: 20px solid $accent;
+            background-color: $component-light;
+            code {
+                display: block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 100%;
+                padding: $spacing-md;
+                background-color: $component;
+            }
+        }
+    }
+    i {
+        font-size: 2em;
+        padding: $spacing-sm;
+    }
+}

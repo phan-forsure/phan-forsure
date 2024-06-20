@@ -1,0 +1,100 @@
+@use 'vars.scss' as *;
+section.heading {
+    flex-wrap: wrap;
+    div.text {
+        margin: $spacing-md;
+        p {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+section.contact-form {
+    position: relative;
+    form {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        width: 100%;
+        @extend %flex-center;
+        flex-wrap: wrap;
+        padding: $spacing-lg;
+        @include query(tablet) {
+            padding: $spacing-md;
+        }
+        @include query(mobile) {
+            padding: $spacing-sm;
+        }
+        h3 {
+            padding: 0 0 $spacing-md;
+            width: 100%;
+            text-align: center;
+        }
+        input {
+            padding: $spacing-sm;
+            background-color: transparent;
+        }
+        input,
+        textarea {
+            background-color: transparent;
+            width: 75%;
+            margin: $spacing-sm;
+            border: none;
+            border-bottom: 2px solid $accent;
+            outline: none;
+            transition: all .1s ease-out;
+            color: $text-dark;
+            &:focus {
+                border-bottom: 0px solid $accent;
+            }
+        }
+        textarea {
+            padding: $spacing-sm;
+            resize: none;
+            height: 20vh;
+        }
+        input[type="submit"] {
+            background-color: $accent;
+            font-weight: bold;
+            color: $text;
+            border: none;
+            cursor: pointer;
+            border-radius: 0;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            -ms-border-radius: 0;
+            -o-border-radius: 0;
+        }
+    }
+}
+
+div.notify {
+    @extend %flex-center;
+    flex-wrap: wrap;
+    padding: $component-spacing;
+    background-color: $component-note;
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    width: 45vh;
+    height: 40vh;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    h2 {
+        width: 100%;
+        text-align: center
+    }
+    button {
+        @extend %button-styling;
+        width: 15vh;
+        &:hover p {
+            position: relative;
+            z-index: 2;
+            color: $text-dark;
+        }
+    }
+}

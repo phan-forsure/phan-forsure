@@ -1,0 +1,65 @@
+@use 'vars.scss' as *;
+section.hero {
+    margin-top: $spacing-xl;
+    @extend %flex-center;
+    height: 70%;
+    background: url("../assets/code.png");
+    background-color: rgba(233, 233, 233, 0);
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+    background-size: cover;
+    div.content {
+        height: 75%;
+        margin: $spacing-xs 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        @include query(mobile) {
+            justify-content: center;
+        }
+        div.text {
+            display: flex;
+            align-content: start;
+            flex-wrap: wrap;
+            color: $text-dark;
+            width: 100%;
+            height: 70%;
+            font-size: 1.2em;
+            @include query(mobile) {
+                justify-content: center;
+                font-size: 1em;
+                height: unset;
+                margin-bottom: $spacing-sm;
+                h1 {
+                    text-align: center;
+                }
+            }
+            p {
+                height: fit-content;
+                width: 100%;
+                @include query(mobile) {
+                    text-align: center;
+                }
+            }
+            span {
+                color: $accent;
+            }
+        }
+        button {
+            @extend %button-styling;
+            @include query(mobile) {
+                width: 20vh;
+            }
+            a {
+                color: $text-dark;
+                position: relative;
+                padding: $button-spacing;
+            }
+            &:hover {
+                a {
+                    color: $accent;
+                }
+            }
+        }
+    }
+}

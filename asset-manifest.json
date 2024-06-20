@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/phan-forsure/commerceapp/static/js/main.f211eed3.js",
-    "index.html": "/phan-forsure/commerceapp/index.html",
-    "main.f211eed3.js.map": "/phan-forsure/commerceapp/static/js/main.f211eed3.js.map"
+    "main.js": "/phan-forsure/repoviewer/static/js/main.deca0668.js",
+    "index.html": "/phan-forsure/repoviewer/index.html",
+    "main.deca0668.js.map": "/phan-forsure/repoviewer/static/js/main.deca0668.js.map"
   },
   "entrypoints": [
-    "static/js/main.f211eed3.js"
+    "static/js/main.deca0668.js"
   ]
 }

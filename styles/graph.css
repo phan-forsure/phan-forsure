@@ -1,0 +1,62 @@
+section.graph, section.graph div.stream-line div.step, section.graph div.stream-line div.step::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.graph div.stream-line {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  counter-reset: number;
+}
+section.graph div.stream-line div.step {
+  position: relative;
+  text-align: center;
+  margin: 2em;
+  width: 30vh;
+  height: 30vh;
+  background-color: #00c861;
+  color: #e5edf5;
+  padding: 1em;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+section.graph div.stream-line div.step:hover {
+  background-color: #00ba5a;
+}
+section.graph div.stream-line div.step::before {
+  counter-increment: number;
+  content: counter(number);
+  position: absolute;
+  padding: 1em;
+  border-radius: 50%;
+  width: 10%;
+  height: 10%;
+  left: 50%;
+  bottom: -20;
+  background-color: #00ba5a;
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  section.graph div.stream-line div.step {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  section.graph div.stream-line div.step {
+    width: 100%;
+  }
+}/*# sourceMappingURL=graph.css.map */

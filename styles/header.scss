@@ -1,51 +1,88 @@
-@use '../../public/styles/vars' as *;
-.logo {
-    padding: $padding-sm $padding-md;
-    font-size: 1.1em;
-    font-weight: bold;
-    @include query(mobile) {
-        padding: $padding-sm / 2 $padding-sm;
-    }
-}
-
+@use 'vars.scss' as *;
 header {
+    width: 100%;
+    height: 80px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    grid-area: head;
-    height: 5em;
     position: sticky;
     top: 0;
-    z-index: 20;
-    ul {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
+    align-items: center;
+    border-bottom: 1px solid $component-light;
+    background-color: $background;
+    z-index: 10;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    h2 {
         height: 100%;
-        li {
-            a {
-                opacity: .8;
-                padding: $padding-sm $padding-md - .25em;
-                transition: all .2s ease-in-out;
-                border-bottom: 0px solid #aaa;
-                height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 0 !important;
+        a {
+            padding: $spacing-sm 0;
+        }
+    }
+    i {
+        position: relative;
+        font-size: 1.3em;
+        padding: $spacing-sm;
+        display: flex;
+        align-content: center;
+        cursor: pointer;
+        opacity: .7;
+        transition: all .2s;
+        -webkit-transition: all .2s;
+        -moz-transition: all .2s;
+        -ms-transition: all .2s;
+        -o-transition: all .2s;
+        &:hover {
+            opacity: 1;
+        }
+        &.fa-home {
+            display: none;
+        }
+        @include query(mobile) {
+            font-size: 1.1em;
+        }
+    }
+    div.nav {
+        display: flex;
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+            height: 100%;
+            li {
+                border-bottom: 0px solid $component-note;
                 display: flex;
                 align-items: center;
                 cursor: pointer;
-                @include query(mobile) {
-                    padding: $padding-sm / 2 $padding-sm;
+                opacity: .7;
+                transition: all .2s ease-in-out;
+                -webkit-transition: all .2s ease-in-out;
+                -moz-transition: all .2s ease-in-out;
+                -ms-transition: all .2s ease-in-out;
+                -o-transition: all .2s ease-in-out;
+                a {
+                    padding: $spacing-sm + .5em;
+                    @include query(mobile) {
+                        padding: $spacing-sm;
+                    }
                 }
                 &:hover {
                     opacity: 1;
-                    border-bottom: 5px solid #aaa;
-                    background-color: #ddd;
+                    border-bottom: 5px solid $component-note;
+                    background-color: $component-light;
                 }
             }
         }
-        .active {
-            opacity: 1;
-            border-bottom: 5px solid #aaa;
-        }
     }
+}
+
+header:has(li:hover, h2:hover, i:hover) {
+    opacity: 1 !important;
 }

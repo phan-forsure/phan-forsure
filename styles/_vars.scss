@@ -209,10 +209,89 @@ $cyans: ( "cyan-100": $cyan-100, "cyan-200": $cyan-200, "cyan-300": $cyan-300, "
     }
 }
 
-$accent: #3d9ef8;
-$accent-dark: #247aca;
-$accent-sec: indianred;
-$accent-sec-dark: #bc5555;
-$padding-sm: 1em;
-$padding-md: 2em;
-$padding-lg: 3em;
+// spacing
+$spacing-xxs: .25em;
+$spacing-xs: .5em;
+$spacing-sm: 1em;
+$spacing-md: 2em;
+$spacing-lg: 3em;
+$spacing-xl: 4em;
+$spacing-xxl: 6em;
+$button-spacing: 1em;
+$component-spacing: 4em;
+$heading-spacing: 1em 0;
+$app-spacing: 20%;
+// light-mode
+$background: #ffffff;
+$component: #ececec;
+$component-light: #f3f3f3;
+$component-note: #b5c1ca;
+// dark-mode
+$background-dark: #1f1f1f;
+$component-dark: #272727;
+$component-dark-light: #3a3a3a;
+$component-note-dark: #575757;
+// accent colors
+$text: #2f353a;
+$text-dark: #e5edf5;
+$accent: #00c861;
+$accent-dark: #00ba5a;
+$accent-light: #00ff7b;
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%flex-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%flex-center-space-evenly {
+    display: flex;
+    justify-content: center;
+    align-content: space-evenly;
+}
+
+%flex-justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+%button-styling {
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    cursor: pointer;
+    padding: $button-spacing;
+    border: none;
+    background-color: $accent;
+    height: fit-content;
+    position: relative;
+    font-weight: bold;
+    &::before {
+        position: absolute;
+        content: '';
+        background-color: $text;
+        opacity: 1;
+        width: 0;
+        height: 100%;
+        left: 0;
+        top: 0;
+        transition: all .2s;
+        -webkit-transition: all .2s;
+        -moz-transition: all .2s;
+        -ms-transition: all .2s;
+        -o-transition: all .2s;
+    }
+    &:hover {
+        background-color: $accent-dark;
+        &::before {
+            width: 100%;
+        }
+    }
+}

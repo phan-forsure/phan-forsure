@@ -1,55 +1,15 @@
 @use 'vars.scss' as *;
 footer {
-    grid-area: foot;
+    padding: $spacing-xxl;
+    border-top: 1px solid $component-light;
+    color: $text;
     display: flex;
-    flex-wrap: wrap;
-    padding: $padding-md;
-    div.text {
-        width: 100%;
-        padding: $padding-md;
-        h2,
-        p {
-            width: 100%;
-            text-align: center;
-        }
-    }
-    div.column {
-        width: calc((100% / 3) - 4em);
-        @include query(tablet) {
-            width: 100%;
-        }
+    justify-content: center;
+    span {
+        font-size: 2em;
+        font-weight: bold;
         @include query(mobile) {
-            width: 100%;
-        }
-        margin: 2em;
-        h3 {
-            width: 100%;
-            border-bottom: solid 2px $accent;
-            padding: $padding-sm / 2;
-        }
-        ul {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            margin: 1em;
-            li {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-                p {
-                    opacity: .5;
-                    cursor: pointer;
-                    transition: all .2s;
-                    width: 100%;
-                    &:hover {
-                        opacity: 1;
-                    }
-                    @include query(mobile) {
-                        font-size: 1.3em;
-                    }
-                }
-            }
+            font-size: 1.4em;
         }
     }
 }

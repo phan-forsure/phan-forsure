@@ -1,0 +1,58 @@
+@use 'vars.scss' as *;
+section.graph {
+    @extend %flex-center;
+    div.stream-line {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+        counter-reset: number;
+        div.step {
+            @extend %flex-center;
+            position: relative;
+            text-align: center;
+            margin: $spacing-md;
+            width: 30vh;
+            height: 30vh;
+            background-color: $accent;
+            color: $text-dark;
+            padding: $spacing-sm;
+            transition: all .2s;
+            -webkit-transition: all .2s;
+            -moz-transition: all .2s;
+            -ms-transition: all .2s;
+            -o-transition: all .2s;
+            &:hover {
+                background-color: $accent-dark;
+            }
+            &::before {
+                @extend %flex-center;
+                counter-increment: number;
+                content: counter(number);
+                position: absolute;
+                padding: 1em;
+                border-radius: 50%;
+                width: 10%;
+                height: 10%;
+                left: 50%;
+                bottom: -20;
+                background-color: $accent-dark;
+                transform: translate(-50%, 0);
+                -webkit-transform: translate(-50%, 0);
+                -moz-transform: translate(-50%, 0);
+                -ms-transform: translate(-50%, 0);
+                -o-transform: translate(-50%, 0);
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+            }
+            @include query(tablet) {
+                width: 100%;
+            }
+            @include query(mobile) {
+                width: 100%;
+            }
+        }
+    }
+}

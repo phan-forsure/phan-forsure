@@ -1,0 +1,110 @@
+section.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.hero div.content button {
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  cursor: pointer;
+  padding: 1em;
+  border: none;
+  background-color: #00c861;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  font-weight: bold;
+}
+section.hero div.content button::before {
+  position: absolute;
+  content: "";
+  background-color: #2f353a;
+  opacity: 1;
+  width: 0;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+section.hero div.content button:hover {
+  background-color: #00ba5a;
+}
+section.hero div.content button:hover::before {
+  width: 100%;
+}
+
+section.hero {
+  margin-top: 4em;
+  height: 70%;
+  background: url("../assets/code.png");
+  background-color: rgba(233, 233, 233, 0);
+  background-blend-mode: lighten;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+section.hero div.content {
+  height: 75%;
+  margin: 0.5em 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+@media (max-width: 767px) {
+  section.hero div.content {
+    justify-content: center;
+  }
+}
+section.hero div.content div.text {
+  display: flex;
+  align-content: start;
+  flex-wrap: wrap;
+  color: #e5edf5;
+  width: 100%;
+  height: 70%;
+  font-size: 1.2em;
+}
+@media (max-width: 767px) {
+  section.hero div.content div.text {
+    justify-content: center;
+    font-size: 1em;
+    height: unset;
+    margin-bottom: 1em;
+  }
+  section.hero div.content div.text h1 {
+    text-align: center;
+  }
+}
+section.hero div.content div.text p {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  section.hero div.content div.text p {
+    text-align: center;
+  }
+}
+section.hero div.content div.text span {
+  color: #00c861;
+}
+@media (max-width: 767px) {
+  section.hero div.content button {
+    width: 20vh;
+  }
+}
+section.hero div.content button a {
+  color: #e5edf5;
+  position: relative;
+  padding: 1em;
+}
+section.hero div.content button:hover a {
+  color: #00c861;
+}/*# sourceMappingURL=main.css.map */
