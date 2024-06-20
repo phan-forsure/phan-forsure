@@ -1,0 +1,93 @@
+section.get-started div.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.get-started button {
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  cursor: pointer;
+  padding: 1em;
+  border: none;
+  background-color: #00c861;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  font-weight: bold;
+}
+section.get-started button::before {
+  position: absolute;
+  content: "";
+  background-color: #2f353a;
+  opacity: 1;
+  width: 0;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+section.get-started button:hover {
+  background-color: #00ba5a;
+}
+section.get-started button:hover::before {
+  width: 100%;
+}
+
+section.get-started {
+  background-color: #272727;
+  color: #e5edf5;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+section.get-started div.text {
+  flex-wrap: wrap;
+}
+section.get-started div.text p,
+section.get-started div.text h2 {
+  text-align: center;
+  width: 100%;
+}
+section.get-started div.text a {
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  position: relative;
+  bottom: 0;
+  color: #00c861 !important;
+  text-decoration: underline;
+}
+section.get-started div.text a:hover {
+  bottom: 3;
+}
+section.get-started button {
+  margin: 2em 0;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  section.get-started button {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  section.get-started button {
+    display: none;
+  }
+}
+section.get-started button a {
+  color: #e5edf5;
+  padding: 1em;
+  position: relative;
+}
+section.get-started button:hover a {
+  color: #00c861;
+}/*# sourceMappingURL=start.css.map */

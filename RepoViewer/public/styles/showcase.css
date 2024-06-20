@@ -1,0 +1,68 @@
+section.showcase div.content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "one one one" "two two two";
+}
+section.showcase div.content div.wrapper-one {
+  grid-area: one;
+}
+section.showcase div.content div.wrapper-two {
+  grid-area: two;
+}
+section.showcase div.content div.wrapper-two p {
+  text-align: end;
+  width: 85%;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  section.showcase div.content div.wrapper-two p {
+    width: unset;
+  }
+}
+@media (max-width: 767px) {
+  section.showcase div.content div.wrapper-two p {
+    width: unset;
+  }
+}
+section.showcase div.content div.text-wrapper {
+  width: 100%;
+  margin: 1em;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  section.showcase div.content div.text-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 767px) {
+  section.showcase div.content div.text-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+section.showcase div.content div.text-wrapper p {
+  font-size: 1.5em;
+  display: inline-block;
+}
+@media (max-width: 767px) {
+  section.showcase div.content div.text-wrapper p {
+    font-size: 1.2em;
+  }
+}
+section.showcase div.content pre {
+  border-top: 20px solid #00c861;
+  background-color: #f3f3f3;
+}
+section.showcase div.content pre code {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  padding: 2em;
+  background-color: #ececec;
+}
+section.showcase i {
+  font-size: 2em;
+  padding: 1em;
+}/*# sourceMappingURL=showcase.css.map */

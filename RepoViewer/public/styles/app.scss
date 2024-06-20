@@ -1,0 +1,135 @@
+@use 'vars.scss' as *;
+* {
+    font-family: Cairo, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.app {
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+}
+
+.comp {
+    padding: $component-spacing $app-spacing;
+    color: $text;
+    @include query(tablet) {
+        padding: $component-spacing $spacing-lg;
+    }
+    @include query(mobile) {
+        padding: $component-spacing $spacing-sm;
+    }
+}
+
+h2 {
+    padding: $heading-spacing;
+}
+
+header {
+    padding: 0 $app-spacing;
+    @include query(tablet) {
+        padding: 0 $spacing-sm;
+    }
+    @include query(mobile) {
+        justify-content: center !important;
+        padding: 0 $spacing-sm;
+        h2 {
+            display: none !important;
+        }
+        i.fa-home {
+            display: flex !important;
+        }
+    }
+}
+
+p {
+    font-size: 1.2em;
+    @include query(tablet) {
+        font-size: 1.3em !important;
+    }
+    @include query(monile) {
+        font-size: 1.4em !important;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $text;
+}
+
+.active {
+    border-bottom: 5px solid $component-note;
+}
+
+section.heading {
+    @extend %flex-center;
+    padding-top: 0;
+    padding-bottom: 0;
+    h1 {
+        padding: $component-spacing;
+        padding-bottom: 0;
+        text-align: center;
+        @include query(tablet) {
+            padding: $spacing-lg;
+        }
+        @include query(mobile) {
+            padding: $spacing-md;
+        }
+    }
+}
+
+div.app[theme="dark-mode"] {
+    background-color: $component-dark !important;
+    body {
+        background-color: $component-dark !important;
+    }
+    section.call-api .spinner {
+        border-right: 5px solid $component-dark;
+    }
+    div.notify {
+        background-color: $component-note-dark;
+    }
+    header,
+    .comp,
+    footer {
+        background-color: $component-dark;
+        color: $text-dark;
+    }
+    header {
+        border-bottom: none;
+        ul li:hover {
+            border-bottom: 5px solid $component-note-dark;
+            background-color: $component-dark-light;
+        }
+        a {
+            color: $text-dark;
+        }
+    }
+    footer {
+        border-top: $component-dark-light solid 1px;
+    }
+    input {
+        caret-color: $text-dark;
+        color: $text-dark;
+    }
+    code {
+        background-color: $component-dark-light !important;
+    }
+    pre {
+        background-color: #333333 !important;
+    }
+}
+
+@include query(mobile) {
+    section.about {
+        padding: $spacing-md;
+        h2 {
+            text-align: center;
+        }
+    }
+}

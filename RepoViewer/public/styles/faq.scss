@@ -1,0 +1,11 @@
+@use 'vars.scss' as *;
+section.faq {
+    div.text {
+        margin: $spacing-md;
+    }
+    @include query(mobile) {
+        h2 {
+            text-align: center;
+        }
+    }
+}

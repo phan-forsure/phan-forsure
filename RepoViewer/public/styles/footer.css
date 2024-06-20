@@ -1,0 +1,16 @@
+footer {
+  padding: 6em;
+  border-top: 1px solid #f3f3f3;
+  color: #2f353a;
+  display: flex;
+  justify-content: center;
+}
+footer span {
+  font-size: 2em;
+  font-weight: bold;
+}
+@media (max-width: 767px) {
+  footer span {
+    font-size: 1.4em;
+  }
+}/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,8 @@
+section.faq div.text {
+  margin: 2em;
+}
+@media (max-width: 767px) {
+  section.faq h2 {
+    text-align: center;
+  }
+}/*# sourceMappingURL=faq.css.map */

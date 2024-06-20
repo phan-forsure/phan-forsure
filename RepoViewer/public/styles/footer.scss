@@ -1,0 +1,15 @@
+@use 'vars.scss' as *;
+footer {
+    padding: $spacing-xxl;
+    border-top: 1px solid $component-light;
+    color: $text;
+    display: flex;
+    justify-content: center;
+    span {
+        font-size: 2em;
+        font-weight: bold;
+        @include query(mobile) {
+            font-size: 1.4em;
+        }
+    }
+}
